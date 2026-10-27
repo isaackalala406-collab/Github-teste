@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESFORCA.CD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="box">
+<h1>ESFORCA</h1>
+<p class="sous">Inscription Nouveaux Étudiants</p>
+<div class="page active" id="p1">
+<h2>PAGE 1 : Nos option</h2>
+<div class="card" onclick="choisir(this,'L1 RTM')">L1 Réseau et technique de maintenance</div>
+<div class="card" onclick="choisir(this,'L1 INFO')">L1 Informatique</div>
+<div class="card" onclick="choisir(this,'L1 SEC & GESTION')">L1 Secrétariat & gestion</div>
+<button class="btn btn-bleu" onclick="aller(2)">Suivant</button>
+</div>
+<div class="page" id="p2">
+<h2>PAGE 2 : Identité Complète</h2>
+
+<div class="grid">
+<input id="nom" placeholder="Nom">
+<input id="postnom" placeholder="Postnom">
+<input id="prenom" placeholder="Prénom">
+<input id="age" type="number" placeholder="Âge">
+
+<input id="tel" placeholder="Téléphone">
+</div>
+<input id="datenais" type="date">
+<input id="ville" placeholder="Ville d'origine / Lieu de naissance">
+<input id="nom" placeholder="Nom du père">
+<input id="postnom" placeholder="Nom de là mère">
+<input id="prenom" placeholder="Provence d'origine">
+
+<div class="grid">
+<input id="sexe" placeholder="Sexe (M/F)">
+<input id="avenue" placeholder="Avenue">
+</div>
+
+<div class="grid">
+<input id="quartier" placeholder="Quartier">
+<input id="commune" placeholder="Commune">
+</div>
+
+<h3 style="color:#002366;margin-top:20px"> VOTRE SITUATION ACADÉMIQUE ?</h3>
+<select id="statut" style="width:100%;padding:16px;border:2px solid #ddd;border-radius:10px;font-size:16px">
+<option value="">-- Choisissez votre situation --</option>
+<option value="Je viens d'être diplômé">Je viens d'être diplômé</option>
+<option value="Je déjà étudié, mais je le refais">Je déjà étudié, mais je le refais</option>
+<option value="Je suis responsable et repris mes études">Je suis responsable et repris mes études</option>
+</select>
+
+<div class="flex"><button class="btn btn-gris" onclick="aller(1)">Retour</button><button class="btn btn-bleu" onclick="aller(3)">Suivant</button></div>
+</div>
+
+<div class="page" id="p3">
+<h2>PAGE 3 : Finalisation</h2>
+<input type="file" id="file" accept="image/*" hidden>
+<div class="photo" onclick="document.getElementById('file').click()"><span id="txt">+ Photo passeport</span><img id="img"></div>
+<div class="bank-fixed">Frais de confirmation : 12345678901234</div>
+<div class="bank-fixed">Frais Académique : 98765432109876</div>
+<div class="notice">Payez vos 25$ à la banque via EQUITY BCDC, Après avoir payer, venez à l'établissement, pour vous enregistré, apporter vos bordereau de confirmation ainsi que vôtre code QR.</div>
+<div class="notice"> ÉTABLISSEMENT 1 : LIMETE 11ème rue Industriel 
+  ÉTABLISSEMENT 2 : GOMBE </div>
+
+<div class="flex"><button class="btn btn-gris" onclick="aller(2)">Retour</button><button class="btn btn-bleu" onclick="afficherPage4(); aller(4)">Voir mon dossier scellé</button></div>
+</div>
+
+<div class="page" id="p4">
+<h2>PAGE 4 : Dossier Scellé</h2>
+<div id="zoneScellee" style="display:none">
+  <div style="border:2px solid #002366;border-radius:15px;padding:20px;background:#f9fbff">
+    <p style="text-align:center;font-weight:900;color:#002366">IDENTIFICATION SCELLÉE</p>
+    <div style="background:white;padding:15px;border-radius:10px;line-height:2">
+      <b>Option :</b> <span id="s_opt"></span><br>
+      <b>Nom complet :</b> <span id="s_nom"></span><br>
+      <b>Tél :</b> <span id="s_tel"></span>
+    </div>
+    <div style="text-align:center;margin-top:20px">
+      <p>Numéro d'ordre :</p>
+      <div id="numOrdre" style="background:#002366;color:white;padding:12px 25px;border-radius:25px;display:inline-block;font-size:24px;font-weight:bold">001</div>
+      <p style="color:green;font-weight:bold;margin-top:15px">✓ DOSSIER SCELLÉ - PRÊT À ENVOYER</p>
+    </div>
+  </div>
+  <a id="btnMail" href="#" style="background:green;color:white;padding:18px;border-radius:8px;display:block;text-align:center;text-decoration:none;font-weight:bold;margin-top:15px;font-size:18px">Envoyer à Isaackalala406@gmail.com</a>
+</div>
+<p id="msgVide" style="text-align:center;color:gray">Remplissez les pages 1 à 3 d'abord...</p>
+<button class="btn btn-gris" onclick="aller(3)" style="margin-top:15px">Retour pour modifier</button>
+</div>
+
+<div class="footer">ESFORCA : 2026-2027 — ESFORCA.CD</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
